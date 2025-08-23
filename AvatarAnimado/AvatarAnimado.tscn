@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3pjq2k7ujqi"]
+
+[ext_resource type="Texture2D" uid="uid://b68tefqrt5qm6" path="res://AvatarAnimado/TCEOD_Ayana_Sprite_Sheet.webp" id="1_jw78i"]
+[ext_resource type="Script" uid="uid://bq76mssw5qruf" path="res://AvatarAnimado/avatar_animado.gd" id="1_y47rg"]
+
+[node name="AvatarAnimado" type="Node2D"]
+script = ExtResource("1_y47rg")
+
+[node name="Busto" type="Sprite2D" parent="."]
+position = Vector2(158, 276)
+texture = ExtResource("1_jw78i")
+region_enabled = true
+region_rect = Rect2(0, 0, 195, 250)
+
+[node name="Cara" type="Sprite2D" parent="Busto"]
+position = Vector2(-3, -44)
+texture = ExtResource("1_jw78i")
+region_enabled = true
+region_rect = Rect2(2, 252, 63, 57)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 286.0
+offset_top = 217.0
+offset_right = 555.0
+offset_bottom = 292.0
+
+[node name="OptionButton" type="OptionButton" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 20.0
+grow_horizontal = 2
+selected = 0
+item_count = 1
+popup/item_0/text = "Elige expresión"
+popup/item_0/id = 0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Seleccionar expresión"
+
+[connection signal="button_down" from="Control/Button" to="." method="_on_button_button_down"]
