@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3n4hbufrjsjo"]
+
+[ext_resource type="MeshLibrary" uid="uid://dtq5anxc0y7ay" path="res://Plataformas & Pulsadores/Scenes/Assets/Blocks/Bloques.tres" id="1_y1h5k"]
+[ext_resource type="PackedScene" uid="uid://xu2ylr36p04h" path="res://Plataformas & Pulsadores/Scenes/Assets/Structures/Plataforma3x2.tscn" id="2_nlan3"]
+[ext_resource type="PackedScene" uid="uid://iv1sodss5qnp" path="res://Plataformas & Pulsadores/Scenes/Player/player.tscn" id="3_n0u65"]
+[ext_resource type="PackedScene" uid="uid://bmjlvlho4rbhl" path="res://Plataformas & Pulsadores/Scenes/Assets/Structures/Boton.tscn" id="4_nlan3"]
+[ext_resource type="Script" uid="uid://bh3lvucjiy5ic" path="res://Plataformas & Pulsadores/Script/ControlSignal.gd" id="5_n0u65"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y1h5k"]
+
+[sub_resource type="Sky" id="Sky_nlan3"]
+sky_material = SubResource("ProceduralSkyMaterial_y1h5k")
+
+[sub_resource type="Environment" id="Environment_n0u65"]
+background_mode = 2
+sky = SubResource("Sky_nlan3")
+
+[node name="Level" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.38448977)
+mesh_library = ExtResource("1_y1h5k")
+collision_layer = 2
+collision_mask = 13
+data = {
+"cells": PackedInt32Array(0, 0, 0, 65535, 0, 0, 65535, 65535, 0, 0, 65535, 0, 65529, 65533, 0, 65529, 65534, 0, 65529, 65535, 0, 65529, 0, 0, 65529, 1, 0, 65529, 2, 0, 65529, 3, 0, 65529, 4, 0, 65530, 65533, 0, 65530, 65534, 0, 65530, 65535, 0, 65530, 0, 0, 65530, 1, 0, 65530, 2, 0, 65530, 3, 0, 65530, 4, 0, 65531, 65533, 0, 65531, 65534, 0, 65531, 65535, 0, 65531, 0, 0, 65531, 1, 0, 65531, 2, 0, 65531, 3, 0, 65531, 4, 0, 65532, 65533, 0, 65532, 65534, 0, 65532, 65535, 0, 65532, 0, 0, 65532, 1, 0, 65532, 2, 0, 65532, 3, 0, 65532, 4, 0, 65533, 65533, 0, 65533, 65534, 0, 65533, 65535, 0, 65533, 0, 0, 65533, 1, 0, 65533, 2, 0, 65533, 3, 0, 65533, 4, 0, 65534, 65533, 0, 65534, 65534, 0, 65534, 65535, 0, 65534, 0, 0, 65534, 1, 0, 65534, 2, 0, 65534, 3, 0, 65534, 4, 0, 65535, 65533, 0, 65535, 65534, 0, 65535, 1, 0, 65535, 2, 0, 65535, 3, 0, 65535, 4, 0, 0, 65533, 0, 0, 65534, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 1, 65533, 0, 1, 65534, 0, 1, 65535, 0, 1, 0, 0, 1, 1, 0, 1, 2, 0, 1, 3, 0, 1, 4, 0, 2, 65533, 0, 2, 65534, 0, 2, 65535, 0, 2, 0, 0, 2, 1, 0, 2, 2, 0, 2, 3, 0, 2, 4, 0, 65528, 0, 1441792, 65527, 0, 1441792, 65527, 1, 1441792, 65526, 1, 1441792, 65526, 0, 1441792, 65528, 1, 1441792, 65525, 0, 1441792, 65524, 0, 1441792, 65523, 0, 1441792, 65523, 1, 1441792, 65524, 1, 1441792, 65525, 1, 1441792, 65523, 6, 1441792, 65534, 65532, 0, 65535, 65532, 0, 65535, 65531, 0, 65535, 65530, 0, 65535, 65529, 0, 65535, 65528, 0, 65535, 65527, 0, 65534, 65527, 0, 65534, 65528, 0, 65534, 65529, 0, 65534, 65530, 0, 65534, 65531, 0, 65532, 65531, 5, 65533, 65532, 655365, 65532, 65532, 655365, 65531, 65532, 655365, 65530, 65532, 655365, 65529, 65532, 655365, 65528, 65533, 1441797, 65528, 65534, 1441797, 65528, 65535, 1441797, 65528, 2, 1441797, 65528, 3, 1441797, 65528, 4, 1441797, 65529, 5, 5, 65530, 5, 5, 65531, 5, 5, 65532, 5, 5, 65533, 5, 5, 65534, 5, 5, 65535, 5, 5, 0, 5, 5, 1, 5, 5, 2, 5, 5, 3, 65534, 1048581, 3, 65535, 1048581, 3, 0, 1048581, 3, 1, 1048581, 3, 2, 1048581, 3, 3, 1048581, 3, 4, 1048581, 1, 65532, 655365, 0, 65532, 655365, 2, 65532, 655365, 3, 65533, 1048581, 3, 65532, 655366, 3, 5, 1048582, 65528, 5, 6, 0, 65531, 1441792, 0, 65530, 1441792, 65533, 65530, 1441792, 65533, 65531, 1441792, 131069, 65531, 1441792, 131069, 65530, 1441792, 65536, 65530, 1441792, 65536, 65531, 1441792, 131072, 65531, 1441792, 131072, 65530, 1441792, 196605, 65530, 1441792, 196605, 65531, 1441792, 196608, 65532, 1441792, 196608, 65531, 1441792, 262141, 65530, 1441792, 262141, 65531, 1441792, 262141, 65532, 1441792, 196608, 65530, 1441792, 65528, 65532, 1441798)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_n0u65")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9930716, 2.9162488, 0.6106012)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_n0u65")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+sky_mode = 1
+
+[node name="Puerta" parent="." instance=ExtResource("2_nlan3")]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, -1, 5, -12.686)
+auto_start = false
+a = Vector3(-1, 5, -12.686)
+b = Vector3(3, 5, -12)
+
+[node name="Boton3" parent="." instance=ExtResource("4_nlan3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -3)
+
+[node name="Boton" parent="." instance=ExtResource("4_nlan3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -3)
+estaPresionado = true
+necestiaPresion = false
+
+[node name="Boton2" parent="." instance=ExtResource("4_nlan3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3)
+necestiaPresion = false
+
+[node name="Boton4" parent="." instance=ExtResource("4_nlan3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 8)
+
+[node name="ControlSignal" type="Node" parent="." node_paths=PackedStringArray("emisores")]
+script = ExtResource("5_n0u65")
+emisores = [NodePath("../Boton2"), NodePath("../Boton4")]
+metadata/_custom_type_script = "uid://bh3lvucjiy5ic"

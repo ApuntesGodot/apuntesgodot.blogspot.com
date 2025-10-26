@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://dgund6mksr1nd"]
+
+[ext_resource type="AudioStream" uid="uid://j3bnjsh72l7f" path="res://Mecanismos básicos - Botones/Art/SFX/SoundEffects/SoundSquash.ogg" id="1_5igi5"]
+[ext_resource type="Script" uid="uid://bvgh6dwyrr6ne" path="res://Mecanismos básicos - Botones/Scenes/Manager/sound_manager.gd" id="1_ef7im"]
+[ext_resource type="AudioStream" uid="uid://qrgpnix73jot" path="res://Mecanismos básicos - Botones/Art/SFX/SoundEffects/coin-coin3.ogg" id="3_7jm8v"]
+[ext_resource type="AudioStream" uid="uid://d0wa8oitn7rbg" path="res://Mecanismos básicos - Botones/Art/SFX/SoundEffects/fall-gameover2.ogg" id="4_gigrd"]
+[ext_resource type="AudioStream" uid="uid://jcnggkm8ewj" path="res://Mecanismos básicos - Botones/Art/SFX/SoundEffects/button-maximize_007.ogg" id="5_sxob0"]
+[ext_resource type="AudioStream" uid="uid://bt4b6xiubl7m0" path="res://Mecanismos básicos - Botones/Art/SFX/Music/Menu-RetroMystic.ogg" id="6_sxob0"]
+[ext_resource type="AudioStream" uid="uid://ctqmtimlhl7t8" path="res://Mecanismos básicos - Botones/Art/SFX/Music/Level-RetroBeat.ogg" id="7_gxeqg"]
+
+[node name="SoundManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ef7im")
+
+[node name="SoundEnemy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_5igi5")
+
+[node name="SoundCoin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7jm8v")
+volume_db = -15.0
+
+[node name="SoundFall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gigrd")
+volume_db = -15.0
+
+[node name="SoundButton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sxob0")
+
+[node name="SoundJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sxob0")
+
+[node name="SoundSquash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sxob0")
+
+[node name="MusicMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_sxob0")
+volume_db = -10.0
+
+[node name="MusicLevel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_gxeqg")
+volume_db = -10.0

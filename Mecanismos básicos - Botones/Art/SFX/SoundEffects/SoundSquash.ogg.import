@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://j3bnjsh72l7f"
+path="res://.godot/imported/SoundSquash.ogg-db87e3aececc96350ad8f1a85ff72278.oggvorbisstr"
+
+[deps]
+
+source_file="res://Mecanismos básicos - Botones/Art/SFX/SoundEffects/SoundSquash.ogg"
+dest_files=["res://.godot/imported/SoundSquash.ogg-db87e3aececc96350ad8f1a85ff72278.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

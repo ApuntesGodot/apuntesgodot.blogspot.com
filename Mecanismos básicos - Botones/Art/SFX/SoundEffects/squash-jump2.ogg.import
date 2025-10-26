@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://sdig8riaurgd"
+path="res://.godot/imported/squash-jump2.ogg-f1ca0ce2cc8e81706fadcba7810a254f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Mecanismos básicos - Botones/Art/SFX/SoundEffects/squash-jump2.ogg"
+dest_files=["res://.godot/imported/squash-jump2.ogg-f1ca0ce2cc8e81706fadcba7810a254f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
