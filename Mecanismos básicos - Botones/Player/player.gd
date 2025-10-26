@@ -30,7 +30,6 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		SoundManager.play_jump_sound()
 		velocity.y = JUMP_VELOCITY
 
 
@@ -74,5 +73,4 @@ func bounce():
 
 
 func _on_fallzone_body_entered(body: Node3D) -> void:
-	SoundManager.play_fall_sound()
 	get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
